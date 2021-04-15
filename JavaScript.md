@@ -8,10 +8,15 @@ JavaScript is a multi-paradigm, dynamic language with types and operators, stand
 Let's start off by looking at the building blocks of any language: the types. JavaScript programs manipulate values, and those values all belong to a type. JavaScript's types are:
 
 Number
+
 String
+
 Boolean
+
 Function
+
 Object
+
 Symbol (new in ES2015)
 
 and undefined and null, which are ... slightly odd. And Array, which is a special kind of object. And Date and RegExp, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:
