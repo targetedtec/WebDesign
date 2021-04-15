@@ -22,15 +22,25 @@ Symbol (new in ES2015)
 and undefined and null, which are ... slightly odd. And Array, which is a special kind of object. And Date and RegExp, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:
 
 Number
+
 String
+
 Boolean
+
 Symbol (new in ES2015)
+
 Object
+
 Function
+
 Array
+
 Date
+
 RegExp
+
 null
+
 undefined
 
 And there are some built-in Error types as well. Things are a lot easier if we stick with the first diagram, however, so we'll discuss the types listed there for now.
