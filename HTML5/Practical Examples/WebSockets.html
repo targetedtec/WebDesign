@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Web Sockets example</title>
+</head>
+
+<body>
+    <div id="content"></div>
+
+    <script type="text/javascript">
+        if ("WebSocket" in window) {
+            var content = document.getElementById('content');
+            var socket = new WebSocket('ws://localhost:1337');
+            socket.onopen = function () {
+                socket.send('hello from the client');
+            };
+
+            socket.onmessage = function (message) {
+                content.innerHTML += message.data + '<br />';
+            };
+
+            socket.onerror = function (error) {
+                console.log('WebSocket error: ' + error);
+            };
+
+            socket.onclose = function() { 
+                  // websocket is closed.
+                  alert("Connection is closed..."); 
+                  document.close();
+               };
+        } else {
+
+            // The browser doesn't support WebSocket
+            alert("WebSocket NOT supported by your Browser!");
+        }
+    </script>
+</body>
+
+</html>
