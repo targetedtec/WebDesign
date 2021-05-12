@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #grad0 {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: linear-gradient(to right, red, yellow);
+        }
+
+        #grad1 {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+        }
+
+        #grad2 {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
+        }
+
+        #grad3 {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: radial-gradient(closest-corner at 60% 55%, red, yellow, black);
+        }
+
+        #grad4 {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: radial-gradient(farthest-corner at 60% 55%, red, yellow, black);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Linear Gradients</h1>
+    <div id="grad0"></div>
+
+
+    <h1>Radial Gradients - Different size keywords</h1>
+
+    <h2>closest-side:</h2>
+    <div id="grad1"></div>
+
+    <h2>farthest-side:</h2>
+    <div id="grad2"></div>
+
+    <h2>closest-corner:</h2>
+    <div id="grad3"></div>
+
+    <h2>farthest-corner (default):</h2>
+    <div id="grad4"></div>
+
+</body>
+
+</html>
