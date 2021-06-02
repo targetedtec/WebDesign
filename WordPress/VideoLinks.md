@@ -10,7 +10,7 @@ https://transcripts.gotomeeting.com/#/s/ecc69f38ce05c054848eaf65e2e067b98b9bedb0
 https://transcripts.gotomeeting.com/#/s/e13a4e5339c93035989a423e1a75c172a4cb649bcd1d8369f37729106fd7e2c1
 
 # Class-4
-will update soon
+https://transcripts.gotomeeting.com/#/s/758f050fea6b15c1b12518c2fbc7aca2a038ac65d07d4ac180711f01d0d390da
 
 
 
