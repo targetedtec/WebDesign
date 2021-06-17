@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>JavaScript Array methods</h2>
+
+  <button onclick="myFunction()">Try it</button>
+
+  <p id="demo"></p>
+  <p id="mapExample"></p>
+  <p id="foreachExample"></p>
+  <p id="reduceExample"></p>
+  <p id="everyExample"></p>
+  <p id="someExample"></p>
+
+  <script>
+    //isArray method    
+//    function myFunction() {
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      var x = document.getElementById("demo");
+      x.innerHTML = Array.isArray(fruits);
+  //  }
+
+    //map function
+    var numbers1 = [45, 4, 9, 16, 25];
+    var numbers2 = numbers1.map(myMapFunction);
+
+    document.getElementById("mapExample").innerHTML = numbers2;
+
+    function myMapFunction(value, index, array) {
+      return value * 2;
+    }
+
+    //foreach method
+    var txt = "";
+    var numbers = [45, 4, 9, 16, 25];
+    numbers.forEach(myFunction2);
+    document.getElementById("foreachExample").innerHTML = txt;
+
+    function myFunction2(value) {
+      txt = txt + value + "<br>";
+    }
+
+    //reduce method
+    const numbers11 = [45, 4, 9, 16, 25];
+    let sum = numbers11.reduce(myFunction, 100);
+
+    document.getElementById("reduceExample").innerHTML = "The sum is " + sum;
+
+    function myFunction(total, value) {
+      return total + value;
+    }
+
+    //every method
+    const numbers12 = [45, 4, 9, 16, 25];
+    let allOver18 = numbers12.every(myFunction);
+
+    document.getElementById("everyExample").innerHTML = "All over 18 is " + allOver18;
+
+    function myFunction(value) {
+      return value > 18;
+    }
+
+    //some method
+    const numbers13 = [45, 4, 9, 16, 25];
+    let someOver18 = numbers13.some(myFunction);
+
+    document.getElementById("someExample").innerHTML = "Some over 18 is " + someOver18;
+
+    function myFunction(value, index, array) {
+      return value > 18;
+    }
+  </script>
+
+</body>
+
+</html>

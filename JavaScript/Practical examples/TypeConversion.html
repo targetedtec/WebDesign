@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>The JavaScript typeof Operator</h2>
+
+  <p>The typeof operator returns the type of a variable, object, function or expression.</p>
+
+  <p id="typeOFExample"></p>
+  <p id="constructorExample"></p>
+  <p id="typeConversionExample"></p>
+
+  <script>
+    document.getElementById("typeOFExample").innerHTML =
+      "typeof john =>" + typeof "john" + "<br>" +
+      "typeof 3.14 =>" + typeof 3.14 + "<br>" +
+      typeof NaN + "<br>" +
+      typeof false + "<br>" +
+      typeof [1, 2, 3, 4] + "<br>" +
+      typeof { name: 'john', age: 34 } + "<br>" +
+      typeof new Date() + "<br>" +
+      typeof function () { } + "<br>" +
+      typeof myCar + "<br>" +
+      typeof null;
+
+
+document.getElementById("constructorExample").innerHTML = 
+  "john".constructor + "<br>" +
+  (3.14).constructor + "<br>" +
+  false.constructor + "<br>" +
+  [1,2,3,4].constructor + "<br>" +
+  {name:'john', age:34}.constructor + "<br>" +
+  new Date().constructor + "<br>" +
+  function () {}.constructor;
+
+var x = 123;
+document.getElementById("typeConversionExample").innerHTML =
+  String(x) + "<br>" +
+  String(123) + "<br>" +
+  String(100 + 23)+"<br>"+
+  Number("3.14") + "<br>" +
+  Number("") + "<br>" +
+  Number("99 123") + "<br>" +
+  parseFloat("99.123") + "<br>" +
+  parseInt("11");
+
+
+var notSureifNull = null
+if (notSureifNull) {
+  console.log("Not null")
+}
+else {
+  console.log("It could be null")
+} // Could be null
+
+notSureifNull ? console.log("truthy value") : console.log("Falsy value")
+
+console.log("Is null equal to empty: ", null == "")
+console.log("Is null equal to zero: ", null == 0)
+console.log("Is null equal to false: ", null == false)
+console.log("Is null equal to NaN: ", null == NaN)
+console.log("Is null equal to 0n: ", null == 0n)
+console.log("Is null equal to null: ", null == null)
+console.log("Is null equal to undefined: ", null == undefined)
+
+console.log("Is null strict equal to empty: ", null === "")
+console.log("Is null strict equal to zero: ", null === 0)
+console.log("Is null strict equal to false: ", null === false)
+console.log("Is null strict equal to NaN: ", null === NaN)
+console.log("Is null strict equal to 0n: ", null === 0n)
+console.log("Is null strict equal to null: ", null === null)
+console.log("Is null strict equal to undefined: ", null === undefined)
+
+let marvel
+console.log(marvel == undefined)
+
+function js_undefined() {
+
+}
+console.log(js_undefined())
+
+
+console.log('Appdividend' - 30)
+console.log(NaN === NaN)
+console.log(NaN == NaN)
+
+
+console.log(typeof undefined)
+console.log(typeof null)
+console.log(typeof NaN)
+console.log(null === undefined )
+console.log(null == undefined)
+
+  </script>
+  </script>
+
+
+</body>
+
+</html>

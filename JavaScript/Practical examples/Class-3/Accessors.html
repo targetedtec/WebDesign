@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Getters and Setters</h2>
+
+<p>Getters and setters allow you to get and set object properties via methods.</p>
+
+<p>This example uses a lang property to get the value of the language property:</p>
+
+<p id="before"></p>
+<p id="after"></p>
+
+<p id="fullnameproperty"></p>
+<p id="fullnamemethod"></p>
+
+
+<script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  language: "NO",
+  get lang() {
+    return this.language;
+  },
+  set lang(value) {
+    this.language = value;
+  },
+  get fullName() {
+    return this.firstName + " " + this.lastName;
+  },
+  fullName1: function() {
+    return this.firstName + " " + this.lastName;
+  }
+
+};
+
+// Display data from the object using a getter:
+document.getElementById("before").innerHTML = person.lang;
+
+// Set a property using set:
+person.lang = "en";
+
+// Display data from the object using a getter:
+document.getElementById("after").innerHTML = person.lang;
+
+// Display data from the object using a getter:
+document.getElementById("fullnameproperty").innerHTML = person.fullName;
+
+// Display data from the object using a method:
+document.getElementById("fullnamemethod").innerHTML = person.fullName1();
+
+
+</script>
+
+</body>
+</html>

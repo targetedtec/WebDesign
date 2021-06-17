@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Parse vs strinify</h2>
+
+<p id="parseExample"></p>
+<p id="strinifyExample"></p>
+
+<script>
+var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+obj = JSON.parse(text);
+document.getElementById("parseExample").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+const obj1 = {name: "John", age: 30, city: "New York"};
+const myJSON = JSON.stringify(obj1);
+document.getElementById("strinifyExample").innerHTML = myJSON;
+
+</script>
+
+</body>
+</html>

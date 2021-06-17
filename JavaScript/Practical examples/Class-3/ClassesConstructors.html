@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>Classes and Constructors</h2>
+
+  <script>
+    // Create an object:
+    function Person(name, age) {
+      //Assigning values through constructor  this.name=name;
+      this.name = name;
+      this.age = age;
+      //functions
+      this.sayHi = function () {
+        return this.name + " Says Hi";
+      }
+    }
+
+    //Creating person instance
+    var p = new Person("aravind", 23);
+    alert(p.sayHi());
+    //Creating Second person instance  
+    var p = new Person("jon", 23);
+    alert(p.sayHi());
+
+  </script>
+
+</body>
+
+</html>

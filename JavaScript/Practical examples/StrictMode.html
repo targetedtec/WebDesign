@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>With "use strict":</h2>
+  <h3>Inside functions, the "this" keyword is no longer the global object if not specified:</h3>
+
+  <script>
+   "use strict";
+    x=5;
+    function myFunction() {
+      console.log(x);
+    }
+    
+    myFunction();
+    
+  </script>
+
+</body>
+
+</html>
