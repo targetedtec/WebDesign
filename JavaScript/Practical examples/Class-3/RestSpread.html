@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Function Rest and Spread Parameter</h2>
+
+<p>The rest parameter (...) allows a function to treat an indefinite number of arguments as an array</p>
+
+<p id="demo"></p>
+
+<p>The spread operator allows us to spread the value of an array (or any iterable) across zero or more arguments in a function or elements in an array</p>
+
+<p id="demo1"></p>
+
+<script>
+function sum(...args) {
+  let sum = 0;
+  for (let arg of args) sum += arg;
+  return sum;
+}
+
+let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+document.getElementById("demo").innerHTML = x;
+
+
+function mySum( a, b, c){
+    document.getElementById("demo1").innerHTML = a+b+c;
+}
+let params= [10,20,30];
+mySum(...params);
+</script>
+
+</body>
+</html>

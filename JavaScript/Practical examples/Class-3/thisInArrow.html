@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript "this"</h2>
+
+<p>This example demonstrate that in a regular function, the "this" keyword represents different objects depending on how the function was called.</p>
+
+<p>Click the button to execute the "hello" function again, and you will see that this time "this" represents the button object.</p>
+
+<button id="btn1">Click Me Regular function</button>
+
+<p id="demo1"></p>
+
+
+<p>This example demonstrate that in Arrow Functions, the "this" keyword represents the object that owns the function, no matter who calls the function.</p>
+
+<p>Click the button to execute the "hello" function again, and you will see that "this" still  represents the window object.</p>
+
+<button id="btn">Click Me Arrow function!</button>
+
+<p id="demo"></p>
+
+<script>
+var hello;
+
+hello = () => {
+  document.getElementById("demo").innerHTML += this;
+}
+
+//The window object calls the function:
+window.addEventListener("load", hello);
+
+//A button object calls the function:
+document.getElementById("btn").addEventListener("click", hello);
+
+var hello1;
+
+hello1 = function() {
+  document.getElementById("demo1").innerHTML += this;
+}
+
+//The window object calls the function:
+window.addEventListener("load", hello1);
+
+//A button object calls the function:
+document.getElementById("btn1").addEventListener("click", hello1);
+</script>
+
+</body>
+</html>

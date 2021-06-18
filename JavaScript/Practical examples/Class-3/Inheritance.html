@@ -19,11 +19,15 @@
         Person.prototype.name = function () {
             return this.firstName + " " + this.lastName
         };
-        
 
+        //Object creation    
         var myFather = new Person("John", "Doe", 50, "blue");
-        document.getElementById("demo").innerHTML =
-            "My father is " + myFather.name();
+        console.log(
+            "My father is " + myFather.name());
+
+        var myName = new Person("abc", "def", 20, "black");
+        console.log(
+            "My Name is " + myName.name());
     </script>
 
 </body>
