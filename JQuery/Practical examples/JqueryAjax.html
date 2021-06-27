@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="demo">
+        <h2>JQuery AJax example</h2>
+        <button id="btn" type="button">Change Content</button>
+        <div id="Result"></div>
+    </div>
+
+    <script>
+        //Jquery  Ajax example
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $.get("https://api.coindesk.com/v1/bpi/currentprice.json", function (response) {
+                    let Ob = JSON.parse(response);
+                    let text ="<h1>"+Ob.chartName+" - " + Ob.time.updated +"</h1>"
+                    text += "<table><tr><td>Currency</td><td>Rate</td></tr>";
+                    
+                    let currencies= Object.keys(Ob.bpi);
+                    currencies.forEach(element => {
+                        var temp = Ob.bpi[element];
+                        text += "<tr><td>" + temp.code + "</td><td>" + parseFloat(temp.rate_float).toFixed(2) + "</td></tr>"
+                    });
+                    text += "</table>";
+                    
+                    $("#Result").append(text);
+                    $("table td").css("border","1px solid");
+                });
+            });
+        });
+
+        //Javascript  Ajax example
+        // function loadDoc() {
+        //     const xhttp = new XMLHttpRequest();
+        //     xhttp.onload = function () {
+        //         document.getElementById("demo").innerHTML =
+        //             this.responseText;
+        //     }
+        //     xhttp.open("GET", "https://api.coindesk.com/v1/bpi/currentprice.json");
+        //     xhttp.send();
+        // }
+    </script>
+
+</body>
+
+</html>
