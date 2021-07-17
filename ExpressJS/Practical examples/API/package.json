@@ -1,0 +1,39 @@
+{
+  "name": "my-api",
+  "version": "0.0.0",
+  "description": "TODO add a description",
+  "title": "myApi",
+  "author": " <>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//my-api.git"
+  },
+  "readme": "TODO add a readme description",
+  "license": "TODO",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js --config=settings.dev.json --log=logs",
+    "jsdoc": "./node_modules/.bin/jsdoc -r -c ./jsdoc-config.json -d ./jsdoc",
+    "apidoc": "./node_modules/.bin/apidoc -f \".*\\.js$\" -i ./app -o ./apidoc"
+  },
+  "bin": {
+    "a": "server.js"
+  },
+  "dependencies": {
+    "app-module-path": "2.2.0",
+    "bluesky-logger": "0.7.0",
+    "body-parser": "1.17.1",
+    "express": "4.15.2",
+    "lodash": "4.17.4",
+    "minimist": "1.2.0",
+    "moment": "2.18.1",
+    "mysql": "2.13.0",
+    "q": "1.4.0"
+  },
+  "devDependencies": {
+    "apidoc": "0.17.5",
+    "docdash": "0.4.0",
+    "jsdoc": "3.4.3",
+    "mocha": "3.2.0"
+  }
+}

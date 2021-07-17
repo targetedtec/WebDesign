@@ -1,0 +1,20 @@
+#
+# myApi - https://github.com//my-api.git
+#
+# Copyright (c) 2021 
+#
+
+# Jetbrains Editors
+.idea/
+*.iml
+
+# Node & NPM
+node_modules/
+npm-debug.log
+
+# JSDoc
+jsdoc/
+apidoc/
+
+# Settings
+settings.*.json
