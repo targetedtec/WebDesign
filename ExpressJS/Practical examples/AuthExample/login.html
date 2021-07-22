@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Auth login example in ExpressJs and MySQL</title>
+<style>
+    .login-form{
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .login-form h1{
+        text-align: center;
+        color: red;
+        font-size: 24px;
+        padding: 20px 0 20px 0;
+    }
+
+    .login-form input[type="password"],
+    .login-form input[type="text"]{
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #dddddd;
+        margin-bottom: 15px;
+        box-sizing:border-box;
+    }
+
+    .login-form input[type="submit"]{
+        width: 100%;
+        padding: 15px;
+        background-color: turquoise;
+        border: 0;
+        box-sizing:border-box;
+        cursor: pointer;
+        font-weight: bold;
+        color: #ffffff  ;
+    }
+
+</style>
+    </head>
+    <body>
+        <div class="login-form">
+            <h1>Login Form</h1>
+            <form action="auth" method="POST">
+                <input type="text" name="username" placeholder="username" required />
+                <input type="password" name="password" placeholder="password" required />
+                <input type="submit" />
+            </form>
+        </div>
+    </body>
+</html>
