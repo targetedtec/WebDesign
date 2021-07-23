@@ -2,6 +2,7 @@
 <html>
     <head>
 <title>Auth login example in ExpressJs and MySQL</title>
+<script src="https://code.jquery.com/git/jquery-3.x-git.min.js" ></script>
 <style>
     .login-form{
         width: 300px;
@@ -10,7 +11,7 @@
 
     .login-form h1{
         text-align: center;
-        color: red;
+        color: rgb(230, 215, 215);
         font-size: 24px;
         padding: 20px 0 20px 0;
     }
@@ -36,14 +37,41 @@
     }
 
 </style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $( "#login" ).click(function(e) {
+            e.preventDefault();
+            //alert( "Handler for .click() called." );
+            var username = $("input[name=username]").val();
+            var password = $("input[name=password]").val();
+            // console.log(username);
+            // console.log(password);
+            var dataOb = {
+                    username:username,
+                    password:password
+                };
+            $.ajax({
+                type: "POST",
+                url: "/auth",
+                dataType: "json",
+                ContentType: "application/json",
+                success: function(data){
+                    debugger;
+                    alert("Save Complete");
+                },
+                data: JSON.stringify(dataOb), 
+            });
+        });
+    });
+</script>
     </head>
     <body>
         <div class="login-form">
             <h1>Login Form</h1>
-            <form action="auth" method="POST">
+            <form>
                 <input type="text" name="username" placeholder="username" required />
                 <input type="password" name="password" placeholder="password" required />
-                <input type="submit" />
+                <input type="submit" id="login" />
             </form>
         </div>
     </body>
